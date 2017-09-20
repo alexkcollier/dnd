@@ -2,12 +2,13 @@ import React from "react"
 import Link from "gatsby-link"
 
 import Container from "../components/container/container"
-import { grids } from "purecss"
+// import { grids } from "purecss"
+var grid = require("purecss/build/grids-responsive.css")
 
 export default ({ data }) => {
   console.log(data)
   return (
-    <div className='pure-u-3-4 content'>
+    <div className='pure-u-1 pure-u-lg-3-4 content'>
       <p>
         This is the content.
       </p>
