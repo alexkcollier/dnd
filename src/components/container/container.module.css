@@ -1,0 +1,8 @@
+* {
+  font-family: "bookmania", Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+.pure-g [class *= "pure-u"] {
+  overflow-x: hidden;
+}

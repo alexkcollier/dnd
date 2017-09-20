@@ -1,16 +1,17 @@
 import React from "react"
-// import g from "glamorous"
 import Link from "gatsby-link"
 
-// import { rhythm } from "../utils/typography"
+import Container from "../components/container/container"
+import { grids } from "purecss"
 
 export default ({ data }) => {
   console.log(data)
   return (
-    <div>
+    <div className='pure-u-3-4 content'>
       <p>
         This is the content.
       </p>
+      {/* Unused query */}
       {/* {data.allMarkdownRemark.edges.map(({ node }) =>
         <div>
           <Link to={node.fields.slug}>
@@ -24,22 +25,22 @@ export default ({ data }) => {
   )
 }
 
-export const query = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
-      totalCount
-      edges {
-        node {
-          frontmatter {
-            title
-            date
-          }
-          fields {
-            slug
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query IndexQuery {
+//     allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+//       totalCount
+//       edges {
+//         node {
+//           frontmatter {
+//             title
+//             date
+//           }
+//           fields {
+//             slug
+//           }
+//           excerpt
+//         }
+//       }
+//     }
+//   }
+// `

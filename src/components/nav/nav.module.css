@@ -1,0 +1,45 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(61,79,93);
+  color: #fff;
+}
+
+.nav h1 {
+  color: #fff;
+}
+
+.nav a, .nav a:visited{
+  color: #ccc;
+  text-decoration: none !important;
+  padding: 0.6em 1em 0.4em 1em;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+  background-color: rgb(70,90,100);
+  line-height: 3.5em;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-variant: small-caps;
+  /* font-family: 	"mrs-eaves-roman-small-caps", "bookmania", Georgia, "Times New Roman", Times, serif; */
+  font-size: 1.17em;
+}
+
+.nav a:hover {
+  background-color: rgb(90,110,120);
+}
+
+.nav a:active {
+  background-color: rgb(110,130,140);
+  color: #ddd;
+}
+
+.header {
+  padding: 0 2em 0;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 4em;
+  background: none!important;
+}

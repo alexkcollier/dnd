@@ -1,15 +1,16 @@
 import React from "react"
 import Link from "gatsby-link"
-import Nav from "../components/nav.jsx"
+import Nav from "../components/nav/nav"
+import Container from "../components/container/container"
 
 
 export default ({ children, data }) =>
-  <div>
+  <Container>
     <Nav>
       {data.site.siteMetadata.title}
     </Nav>
     {children()}
-  </div>
+  </Container>
 
 export const query = graphql`
   query LayoutQuery {

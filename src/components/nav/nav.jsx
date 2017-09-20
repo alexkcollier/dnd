@@ -1,29 +1,22 @@
 import React from "react"
 import Link from "gatsby-link"
 import styles from "./nav.module.css"
+import { grids } from "purecss"
 
 export default ({ children }) =>
-  <div className={styles.nav}>
-    <Link to={`/`}>
-      <h1>
-        {children}
-      </h1>
-    </Link>
-    <ul>
-      <li>
+  <div className= {`pure-u-1-4 ${styles.nav}`}>
+    <div className={styles.header}>
+      <div>
+        <Link to={`/`}>
+          <h1>
+            {children}
+          </h1>
+        </Link>
         <Link to={`/races/`}>Races</Link>
-      </li>
-      <li>
         <Link to={`/classes/`}>Classes</Link>
-      </li>
-      <li>
         <Link to={`/religion/`}>Religion</Link>
-      </li>
-      <li>
         <Link to={`/time/`}>Time</Link>
-      </li>
-      <li>
         <Link to={`/additional-rules/`}>Additional Rules</Link>
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
