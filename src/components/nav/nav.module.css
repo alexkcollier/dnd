@@ -6,30 +6,35 @@
   color: #fff;
 }
 
-.nav h1 {
+h1 {
   color: #fff;
+  font-size: 4em;
 }
 
-.nav a, .nav a:visited{
+a, a:visited {
   color: #ccc;
   text-decoration: none !important;
   padding: 0.6em 1em 0.4em 1em;
   margin-left: 0.3em;
   margin-right: 0.3em;
-  background-color: rgb(70,90,100);
   line-height: 3.5em;
-  white-space: nowrap;
   border-radius: 0.2em;
+  /* white-space: nowrap; */
   font-variant: small-caps;
   /* font-family: 	"mrs-eaves-roman-small-caps", "bookmania", Georgia, "Times New Roman", Times, serif; */
   font-size: 1.17em;
 }
 
-.nav a:hover {
+
+.link, .link:visited {
+  background-color: rgb(70,90,100);
+}
+
+.link:hover {
   background-color: rgb(90,110,120);
 }
 
-.nav a:active {
+.link:active {
   background-color: rgb(110,130,140);
   color: #ddd;
 }
@@ -37,9 +42,4 @@
 .header {
   padding: 0 2em 0;
   text-align: center;
-}
-
-.header h1 {
-  font-size: 4em;
-  background: none!important;
 }

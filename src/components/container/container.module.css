@@ -6,3 +6,44 @@
 .pure-g [class *= "pure-u"] {
   overflow-x: hidden;
 }
+
+.content {
+  padding: 1em 3em 0;
+  background-color: #e5e5d9;
+}
+
+@media (min-width: 64em) {
+  .content {
+    position: relative;
+    margin-left: 25%;
+  }
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 64em) {
+  .table-scroll {
+    display:block;
+    overflow-x: auto !important;
+  }
+}
+
+.columns {
+  column-count: 2;
+  column-gap: 3em;
+}
+
+.columns-span {
+  column-span: all;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-italic {
+  font-style: italic;
+}
