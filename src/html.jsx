@@ -1,4 +1,5 @@
 import React from "react"
+import Typekit from "react-typekit"
 
 let stylesStr
 if (process.env.NODE_ENV === `production`) {
@@ -31,6 +32,7 @@ module.exports = class HTML extends React.Component {
           />
           {this.props.headComponents}
           {css}
+          <Typekit kitId="fnw1iwa" />
         </head>
         <body>
           {this.props.preBodyComponents}
