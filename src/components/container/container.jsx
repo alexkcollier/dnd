@@ -6,6 +6,6 @@ import { grids } from "purecss"
 import styles from "./container.module.css"
 
 export default ({ children }) => 
-  <div className={`pure-g ${styles.container}`}>
+  <div className={`pure-g`}>
     {children}
   </div>

@@ -5,6 +5,7 @@
   background: rgb(61,79,93);
   color: #fff;
   text-align: right;
+  position: fixed;
 }
 
 .header {
