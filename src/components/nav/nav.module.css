@@ -2,32 +2,37 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
   background: rgb(61,79,93);
   color: #fff;
 }
 
-h1 {
-  color: #fff;
+h1, h1 a:visited {
+  color: #fff !important;
   font-size: 4em;
+  font-family: 	"mrs-eaves-roman-small-caps", "bookmania", Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
 }
 
 a, a:visited {
   color: #ccc;
   text-decoration: none !important;
-  padding: 0.6em 1em 0.4em 1em;
-  margin-left: 0.3em;
-  margin-right: 0.3em;
-  line-height: 3.5em;
-  border-radius: 0.2em;
-  /* white-space: nowrap; */
   font-variant: small-caps;
-  /* font-family: 	"mrs-eaves-roman-small-caps", "bookmania", Georgia, "Times New Roman", Times, serif; */
-  font-size: 1.17em;
+  font-family: 	"mrs-eaves-roman-small-caps", "bookmania", Georgia, "Times New Roman", Times, serif;
+  /* font-size: 1.17em; */
 }
 
+.pure-button {
+  border-radius: 0.2em;
+}
 
 .link, .link:visited {
   background-color: rgb(70,90,100);
+  padding: 0.6em 1em 0.4em 1em;
+  margin: 0.3em;
+  /* margin-right: 0.3em; */
+  /* line-height: 3.5em; */
+  white-space: nowrap;
 }
 
 .link:hover {
@@ -42,4 +47,9 @@ a, a:visited {
 .header {
   padding: 0 2em 0;
   text-align: center;
+}
+
+li {
+  list-style: none;
+  display: inline-flex;
 }
