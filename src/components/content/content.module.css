@@ -1,3 +1,27 @@
+h1, h2, h3 {
+  font-family: 	"mrs-eaves-roman-small-caps", "bookmania", Georgia, "Times New Roman", Times, serif;
+  font-variant: small-caps;
+  font-weight: 400;
+  color: rgb(128,0,0);
+}
+
+h2 {
+  border-bottom: 2px solid rgb(194,174,109);
+}
+
+table {
+  font-family: "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-feature-settings: "lnum";
+}
+
+.pure-table thead {
+  vertical-align: middle;
+}
+
+.pure-table td {
+    background-color: #fefefe;
+}
+
 .content {
   background-color: #e5e5d9;
   padding: 1em 3em;
