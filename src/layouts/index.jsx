@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "gatsby-link"
-import Nav from "../components/nav/nav"
 import Container from "../components/container/container"
+import Nav from "../components/nav/nav"
 import Content from "../components/content/content"
 
 

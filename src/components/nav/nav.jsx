@@ -1,8 +1,7 @@
 import React from "react"
 import Link from "gatsby-link"
+
 import styles from "./nav.module.css"
-import { grids } from "purecss"
-// var grid = require("purecss/build/grids-responsive.css")
 
 export default ({ children }) =>
   <div className={`pure-u-1-4 ${styles.nav}`}>

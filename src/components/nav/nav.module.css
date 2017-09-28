@@ -1,5 +1,5 @@
 .nav {
-  display: flex !important;
+  display: flex;
   align-items: center;
   height: 100vh;
   background: rgb(61,79,93);
