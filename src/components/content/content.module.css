@@ -26,6 +26,7 @@ table {
   background-color: #e5e5d9;
   padding: 1em 3em;
   min-height: 100vh;
+  box-sizing: border-box;
 }
 
 @media (min-width: 64em) {
