@@ -5,7 +5,7 @@ import styles from "./nav.module.css"
 
 export default ({ children }) =>
   <div className={`pure-u-1-4 ${styles.nav}`}>
-    <div className={`pure-u-1 ${styles.header}`}>
+    <div className={`${styles.header}`}>
       <Link to={`/`}>
         <h1>
             {children}
