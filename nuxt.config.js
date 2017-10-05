@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'dnd',
+    title: 'd\&d',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -17,6 +17,13 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  /*
+  ** CSS
+  */
+  css: [
+    'bulma',
+    '@assets/scss/main.scss'
+  ],
   /*
   ** Build configuration
   */
