@@ -9,6 +9,10 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
+    script: [
+      { src: 'https://use.typekit.net/fnw1iwa.js' },
+      { innerHTML: 'try{Typekit.load({ async: true });}catch(e){}' }
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
@@ -21,8 +25,8 @@ module.exports = {
   ** CSS
   */
   css: [
-    'bulma',
-    '@assets/scss/main.scss'
+    // 'bulma',
+    {src:'@assets/scss/main.scss', lang: 'scss'}
   ],
   /*
   ** Build configuration

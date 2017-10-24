@@ -477,6 +477,7 @@
         <thead>
           <th>Month</th>
           <th>Common Name</th>
+        </thead>
           <tbody>
             <tr>
               <td>Needfest</td>
@@ -539,7 +540,6 @@
               <td>Sunsebb</td>
             </tr>
           </tbody>
-        </thead>
       </table>
     </div>
     <div id="AdditionalRules">

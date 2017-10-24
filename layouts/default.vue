@@ -16,6 +16,11 @@
   position: relative;
   left:25%;
   width:75%;
+  padding: 3em;
+  @media screen and (max-width: 768px) {
+    left: 0;
+    width: 100%;    
+  }
 }
 </style>
 
