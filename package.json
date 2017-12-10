@@ -1,20 +1,21 @@
 {
-  "name": "acollier",
+  "name": "dnd",
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "lite-server"
+    "dev": "lite-server",
+    "deploy": "surge ./"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexkcollier/acollier.git"
+    "url": "git+https://github.com/alexkcollier/dnd.git"
   },
   "author": "Alex Collier",
   "bugs": {
-    "url": "https://github.com/alexkcollier/acollier/issues"
+    "url": "https://github.com/alexkcollier/dnd/issues"
   },
-  "homepage": "https://github.com/alexkcollier/acollier#readme",
+  "homepage": "https://github.com/alexkcollier/dnd#readme",
   "dependencies": {},
   "devDependencies": {
     "lite-server": "^2.3.0"
