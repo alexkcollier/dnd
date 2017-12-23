@@ -3,15 +3,11 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'd\&d',
+    title: 'D\&D',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
-    ],
-    script: [
-      { src: 'https://use.typekit.net/fnw1iwa.js' },
-      { innerHTML: 'try{Typekit.load({ async: true });}catch(e){}' }
+      { hid: 'description', name: 'description', content: 'D\&D custom rules' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -25,8 +21,7 @@ module.exports = {
   ** CSS
   */
   css: [
-    // 'bulma',
-    {src:'@assets/scss/main.scss', lang: 'scss'}
+    { src:'@assets/scss/main.scss', lang: 'scss' }
   ],
   /*
   ** Build configuration
@@ -45,7 +40,9 @@ module.exports = {
         })
       }
     },
-    // Ignore Bulma value errors
+    /*
+    ** Ignore Bulma value errors
+    */
     postcss: {
       plugins: {
         'postcss-custom-properties': {
