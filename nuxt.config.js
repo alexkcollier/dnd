@@ -44,6 +44,14 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+    },
+    // Ignore Bulma value errors
+    postcss: {
+      plugins: {
+        'postcss-custom-properties': {
+          warnings: false
+        }
+      }
     }
   }
 }
