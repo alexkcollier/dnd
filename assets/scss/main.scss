@@ -1,7 +1,15 @@
+// Import variables and functions
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+
+// Import custom
 @import "variables";
 @import "typography";
-@import "~bulma/bulma";
 
+// Button fix for minified html
 .button {
   margin: 0.3em;
 }
+
+// Import the rest of bulma
+@import "~bulma/bulma";
