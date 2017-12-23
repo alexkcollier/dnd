@@ -1,6 +1,8 @@
 <template>
 <transition name="fade">
-  <div v-show="scrolled"><div id="topBtn" class="button top-button" @click="topFunction">Top</div></div>
+  <div v-show="scrolled">
+    <div id="topBtn" class="button top-button" @click="topFunction">Top</div>
+  </div>
 </transition>
 </template>
 
