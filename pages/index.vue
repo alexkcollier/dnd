@@ -122,16 +122,7 @@
         <h2 class="title">Warlock</h2>
 
         <p>All warlocks know the <i>minor illusion</i> cantrip. It does not count towards your limit of known cantrips.</p>
-
-        <h3>The Great Old One</h3>
-
-        <p>Warlocks whose patron is a Great Old One have an additional ability score, Sanity. Roll this score after rolling your
-          primary ability scores using 4d6, dropping the lowest roll. </p>
-
-        <p>Sanity checks will be used for interactions with alien beings and, and saving throws when there is a risk of succumbing
-          to madness from these interactions.</p>
-
-        <p><b><i>Steel Will. </i></b>At eleventh level, you gain proficiency in Sanity saving throws.</p>
+        <p>At first level, you can choose to use Intelligence instead of Charisma as your spellcasting ability for your warlock spells</p>
 
         <h2 class="title">Wizard</h2>
 
