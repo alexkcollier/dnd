@@ -11,7 +11,7 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "deploy": "surge ./dist"
+    "deploy": "npm run generate && surge ./dist"
   },
   "dependencies": {
     "bulma": "^0.5.3",
