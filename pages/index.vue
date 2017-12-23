@@ -1,15 +1,15 @@
 <template>
-  <section>
+  <section class="section">
     <div id="Races">
-      <h1>Races</h1>
+      <h1 class="title">Races</h1>
 
-      <h2>Dragonborn</h2>
+      <h2 class="title">Dragonborn</h2>
 
       <p>Unable to reproduce, dragonborn are exceptionally rare. They can only be created by true dragons, the means of which
         are not understood. Since dragons must go out of their way to create dragonborn, they are often created to serve
         a specific purpose which they rarely deviate from. As a result, many are exceptionally wary of the chromatic variants.</p>
 
-      <h2>Dwarves</h2>
+      <h2 class="title">Dwarves</h2>
 
       <p>Dwarves believe the entire world is a large, sleeping dwarf. The winds are its breath, waters its tears, and dwarves
         themselves were formed in its womb beneath the ground. They are widespread, but have a deep-seated fear of water
@@ -17,14 +17,14 @@
         the Ancestral Guardian.
       </p>
 
-      <h2>Elves</h2>
+      <h2 class="title">Elves</h2>
 
       <p>Elves see themselves as children of the heavenly bodies. Wood elves are the children of the day, dark elves are children
         of the night, and high elves are children of the sun, or the moons. Elves born in twilight are known as eladrin.
         Notably, not all dark elves are hated and reviled, nor do they primarily dwell in the Underdark. They are simply
         elves that are primarily nocturnal.</p>
 
-      <h2>Gnomes</h2>
+      <h2 class="title">Gnomes</h2>
 
       <p>Like dwarves, gnomes see their origins in the earth. Not in the depths, but rather the stones on the surface. Many
         gnomes dedicate themselves to discovery and innovation, but tribes of wild gnomes have been known to raid small villages.
@@ -45,12 +45,12 @@
         than yours, you can cause the attack or spell to deal extra damage to the creature. The extra damage equals your
         level. Once you use this trait, you can't use it again until you finish a short or long rest.</p>
 
-      <h2>Halflings</h2>
+      <h2 class="title">Halflings</h2>
 
       <p>Halflings are one of the oldest races in the world, their small stature enabling them to go unnoticed among the early
         titans and primordials. Ruined halfling civilizations from ages past are not uncommon.</p>
 
-      <h2>Humans</h2>
+      <h2 class="title">Humans</h2>
 
       <p>Humans are widespread and diverse. No one is sure of their origins, although some believe that humans are simply tall
         halflings. They are highly adaptable, often taking on traits from other races that live near them. For example, humans
@@ -65,9 +65,9 @@
     </div>
     <div id="Classes">
 
-      <h1>Classes</h1>
+      <h1 class="title">Classes</h1>
 
-      <h2>Barbarian</h2>
+      <h2 class="title">Barbarian</h2>
 
       <h3>Path of the Berserker</h3>
 
@@ -78,25 +78,25 @@
       <p><b><i>Intimidating Presence.</i></b> You can use your Strength modifier instead of your Charisma modifier to calculate
         the DC.</p>
 
-      <h2>Bard</h2>
+      <h2 class="title">Bard</h2>
 
       <p>All bards know the <i>minor illusion </i>cantrip. It does not count towards your limit of known cantrips.</p>
 
-      <h2>Cleric</h2>
+      <h2 class="title">Cleric</h2>
 
       <p>All clerics know the <i>thaumaturgy</i> cantrip. It does not count towards your limit of known cantrips.</p>
 
-      <h2>Druid</h2>
+      <h2 class="title">Druid</h2>
 
       <p>All clerics know the <i>druidcraft</i> cantrip. It does not count towards your limit of known cantrips.</p>
 
-      <h2>Fighter</h2>
+      <h2 class="title">Fighter</h2>
 
       <h3>Champion</h3>
 
       <p><b><i>Improved Second Wind.</i></b> Starting at 7<sup>th</sup> level, you gain an additional use of <i>Second Wind.</i></p>
 
-      <h2>Monk</h2>
+      <h2 class="title">Monk</h2>
 
       <p>Darts are monk weapons.</p>
 
@@ -104,18 +104,18 @@
 
       <p>The ki cost of all elemental disciplines is decreased by 1, to a minimum of 1.</p>
 
-      <h2>Ranger</h2>
+      <h2 class="title">Ranger</h2>
 
       <p>You can use the Revised Ranger.</p>
 
-      <h2>Sorcerer</h2>
+      <h2 class="title">Sorcerer</h2>
 
       <p>All sorcerers know the <i>prestidigitation</i> cantrip. It does not count towards your limit of known cantrips.</p>
 
       <p><b><i>Spellcasting. </i></b>Instead of using the spell points variant. Spell points can be used as sorcery points,
         and sorcery points can be used as spell points.</p>
 
-      <h2>Warlock</h2>
+      <h2 class="title">Warlock</h2>
 
       <p>All warlocks know the <i>minor illusion</i> cantrip. It does not count towards your limit of known cantrips.</p>
 
@@ -129,15 +129,15 @@
 
       <p><b><i>Steel Will. </i></b>At eleventh level, you gain proficiency in Sanity saving throws.</p>
 
-      <h2>Wizard</h2>
+      <h2 class="title">Wizard</h2>
 
       <p>All wizards know the <i>prestidigitation</i> cantrip. It does not count towards your limit of known cantrips.</p>
     </div>
     <div id="Religion">
 
-      <h1>Religion</h1>
+      <h1 class="title">Religion</h1>
 
-      <h2>The Grey Faith</h2>
+      <h2 class="title">The Grey Faith</h2>
 
       <p>The main religion in civilized areas is the Grey Faith. It holds the premise that the world is composed of Light and
         Dark, and one cannot exist without the other. The Light is usually associated with life, joy, victory, and art, while
@@ -155,7 +155,7 @@
         but monks or paladins instead. Clerics devote themselves to the care of all, monks to the pursuit of self-perfection
         and enlightenment, and paladins to specific causes of the faith.</p>
 
-      <h2>Folk Religion</h2>
+      <h2 class="title">Folk Religion</h2>
 
       <p>As you move further from the major cities, the concept of deities grows more prevalent. In small towns and villages,
         stories are told of when powerful beings formed the world and warred against each other. Not wishing to mar their
@@ -168,7 +168,7 @@
 
       <h3>Folk Deities</h3>
 
-      <table>
+      <table class="table is-striped is-wide-table">
         <thead>
           <th>Deity</th>
           <th>Alignment</th>
@@ -468,19 +468,19 @@
 
     </div>
     <div id="Time">
-      <h1>Time</h1>
+      <h1 class="title">Time</h1>
       <p>A year consists of 364 days divided into 12 months of 28 days and 4 festivals of 7 days. There are 7 days in a week
         named Starday, Sunday, Moonday, Godsday, Waterday, Earthday, and Freeday.</p>
 
-      <h2>The Calendar</h2>
-      <table>
+      <h2 class="title">The Calendar</h2>
+      <table class="table is-striped">
         <thead>
           <th>Month</th>
           <th>Common Name</th>
         </thead>
           <tbody>
             <tr>
-              <td>Needfest</td>
+              <td  class="is-italic has-text-centered" colspan="2">Needfest</td>
             </tr>
             <tr>
               <td>1</td>
@@ -495,7 +495,7 @@
               <td>Coldeven</td>
             </tr>
             <tr>
-              <td>Growfest</td>
+              <td  class="is-italic has-text-centered" colspan="2">Growfest</td>
             </tr>
             <tr>
               <td>4</td>
@@ -510,7 +510,7 @@
               <td>Wealsun</td>
             </tr>
             <tr>
-              <td>Richfest</td>
+              <td  class="is-italic has-text-centered" colspan="2">Richfest</td>
             </tr>
             <tr>
               <td>7</td>
@@ -525,7 +525,7 @@
               <td>Harvester</td>
             </tr>
             <tr>
-              <td>Brewfest</td>
+              <td  class="is-italic has-text-centered" colspan="2">Brewfest</td>
             </tr>
             <tr>
               <td>10</td>
@@ -544,20 +544,20 @@
     </div>
     <div id="AdditionalRules">
 
-      <h1>Additional Rules</h1>
+      <h1 class="title">Additional Rules</h1>
 
-      <h2>Critical Hits</h2>
+      <h2 class="title">Critical Hits</h2>
 
       <p>When you score a critical hit, roll the attack's damage as normal. Then, add the maximum possible roll and any relevant
         modifiers.
       </p>
 
-      <h2>Dropping to 0 Hit Points</h2>
+      <h2 class="title">Dropping to 0 Hit Points</h2>
 
       <p>If you take any damage while you have 0 hit points, or fail two death saving throws, roll a d100 and consult the following
         table when you regain consciousness. </p>
 
-      <table>
+      <table class="table is-striped">
         <thead>
           <th>d100</th>
           <th>Result</th>
@@ -582,22 +582,21 @@
         </tbody>
       </table>
 
-      <h2>Encumbrance</h2>
+      <h2 class="title">Encumbrance</h2>
 
       <p>Just be realistic. You probably can't walk quickly carrying an aurochs, the wagon it was pulling, <i>and</i> your equipment.</p>
 
-      <h2>Fighting Styles</h2>
+      <h2 class="title">Fighting Styles</h2>
 
       <p><b><i>Two-Weapon Fighting.</i></b> Starting at eleventh level, if you have the Extra Attack feature and you engage
         in two-weapon fighting, you can make two attacks on your bonus action instead of one.</p>
 
-      <h2>Thrown Weapons</h2>
+      <h2 class="title">Thrown Weapons</h2>
 
       <p>When you throw a weapon as part of your attack action, you may draw a weapon with both the light and thrown properties
         for every weapon you throw.
       </p>
     </div>
-  </div>
   </section>
 </template>
 
@@ -612,4 +611,8 @@ export default {
 </script>
 
 <style>
+.is-wide-table {
+  display: block;
+  overflow-x: auto;
+}
 </style>

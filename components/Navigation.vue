@@ -1,5 +1,5 @@
 <template>
-  <nav class="column is-3">
+  <nav class="section">
     <div>
       <h1 class="title is-1">D&amp;D</h1>
       <nuxt-link class="button is-info" to="#Races">Races</nuxt-link>
@@ -13,19 +13,20 @@
 
 <style lang="scss" scoped>
 nav {
-  height: 100vh;
+  min-height: 100vh;
+  width: 25%;
   background-color: silver;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   position: fixed;
   text-align: right;
-  padding: 2em;
   @media screen and (max-width: 768px){
     position: relative;
     justify-content: center!important;
-    height: 30vh;
+    min-height: 30vh;
     text-align: center;
+    width: 100%;
   }
 }
 </style>
