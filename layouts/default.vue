@@ -1,7 +1,7 @@
 <template>
   <div class="columns page-container">
     <Navigation/>
-    <div class="content">
+    <div class="content content-wrapper">
       <nuxt/>
     </div>
   </div>
@@ -12,10 +12,11 @@
   margin: 0 0 0 0!important;
 }
 
-.content {
+.content-wrapper {
   position: relative;
   left:25%;
   width:75%;
+  background-color: rgb(229, 229, 217);
   @media screen and (max-width: 768px) {
     left: 0%;
     width: 100%;

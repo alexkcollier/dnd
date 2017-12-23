@@ -1,5 +1,27 @@
+$body-size: 18px;
+
+// Headings
 h1, h2, h3, h4, h5, h6, .title, .button {
   font-family: "mrs-eaves-roman-small-caps", $family-primary;
   font-weight: normal;
   font-variant: small-caps;
+}
+
+$content-heading-color: $red;
+
+.content {
+  h2 {
+    border-bottom: 2px solid $gold;
+  }
+}
+
+// Tables
+table {
+  font-family: $family-sans-serif;
+  font-feature-settings: "lnum";
+}
+
+// Add is-italic
+.is-italic {
+  font-style: italic;
 }
