@@ -1,6 +1,6 @@
 <template>
   <div class="columns page-container">
-    <Navigation class="nav"/>
+    <Navigation class="nav is-bold"/>
     <div class="content content-wrapper">
       <nuxt/>
     </div>
@@ -25,6 +25,10 @@
     text-align: center;
     width: 100%;
   }
+}
+
+.is-bold {
+  background-image: linear-gradient(141deg,#243b43,#3d4f5d 71%,#435571);
 }
 
 .page-container {
