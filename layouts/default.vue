@@ -1,6 +1,6 @@
 <template>
   <div class="columns page-container">
-    <Navigation class="nav is-bold"/>
+    <Navigation class="navigation is-bold"/>
     <div class="content content-wrapper">
       <nuxt/>
     </div>
@@ -8,7 +8,7 @@
 </template>
 
 <style lang="scss" scoped>
-.nav {
+.navigation {
   display: flex;
   align-items: center;
   justify-content: flex-end;
