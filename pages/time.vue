@@ -20,60 +20,60 @@
               <td  class="is-italic has-text-centered" colspan="2">Needfest</td>
             </tr>
             <tr>
-              <td>1</td>
+              <td class="has-text-centered">1</td>
               <td>Fireseek</td>
             </tr>
             <tr>
-              <td>2</td>
+              <td class="has-text-centered">2</td>
               <td>Readying</td>
             </tr>
             <tr>
-              <td>3</td>
+              <td class="has-text-centered">3</td>
               <td>Coldeven</td>
             </tr>
             <tr>
               <td  class="is-italic has-text-centered" colspan="2">Growfest</td>
             </tr>
             <tr>
-              <td>4</td>
+              <td class="has-text-centered">4</td>
               <td>Planting</td>
             </tr>
             <tr>
-              <td>5</td>
+              <td class="has-text-centered">5</td>
               <td>Flocktime</td>
             </tr>
             <tr>
-              <td>6</td>
+              <td class="has-text-centered">6</td>
               <td>Wealsun</td>
             </tr>
             <tr>
               <td  class="is-italic has-text-centered" colspan="2">Richfest</td>
             </tr>
             <tr>
-              <td>7</td>
+              <td class="has-text-centered">7</td>
               <td>Reaping</td>
             </tr>
             <tr>
-              <td>8</td>
+              <td class="has-text-centered">8</td>
               <td>Goodmonth</td>
             </tr>
             <tr>
-              <td>9</td>
+              <td class="has-text-centered">9</td>
               <td>Harvester</td>
             </tr>
             <tr>
               <td  class="is-italic has-text-centered" colspan="2">Brewfest</td>
             </tr>
             <tr>
-              <td>10</td>
+              <td class="has-text-centered">10</td>
               <td>Patchwall</td>
             </tr>
             <tr>
-              <td>11</td>
+              <td class="has-text-centered">11</td>
               <td>Ready'reat</td>
             </tr>
             <tr>
-              <td>12</td>
+              <td class="has-text-centered">12</td>
               <td>Sunsebb</td>
             </tr>
           </tbody>

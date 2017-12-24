@@ -20,24 +20,24 @@
         <table class="table is-striped">
           <thead>
             <tr>
-              <th>d100</th>
+              <th class="has-text-centered">d100</th>
               <th>Result</th>
             </tr>
           </thead>
 
           <tbody>
             <tr>
-              <td>01-40</td>
+              <td class="has-text-centered">01-40</td>
               <td>Lingering injury</td>
             </tr>
 
             <tr>
-              <td>41-80</td>
+              <td class="has-text-centered">41-80</td>
               <td>Suffer one level of exhaustion</td>
             </tr>
 
             <tr>
-              <td>81-00</td>
+              <td class="has-text-centered">81-00</td>
               <td>Nothing happens</td>
             </tr>
 

@@ -27,7 +27,7 @@
 
         <h2 class="title">Druid</h2>
 
-        <p>All clerics know the <i>druidcraft</i> cantrip. It does not count towards your limit of known cantrips.</p>
+        <p>All druids know the <i>druidcraft</i> cantrip. It does not count towards your limit of known cantrips.</p>
 
         <h2 class="title">Fighter</h2>
 
@@ -51,13 +51,14 @@
 
         <p>All sorcerers know the <i>prestidigitation</i> cantrip. It does not count towards your limit of known cantrips.</p>
 
-        <p><b><i>Spellcasting. </i></b>Instead of using the spell points variant. Spell points can be used as sorcery points,
-          and sorcery points can be used as spell points.</p>
+        <p><b><i>Spellcasting. </i></b>You can use spell points variant in the DMG (pp. 286-287). Spell points can be used as sorcery points, and sorcery points can be used as spell points.</p>
 
         <h2 class="title">Warlock</h2>
 
         <p>All warlocks know the <i>minor illusion</i> cantrip. It does not count towards your limit of known cantrips.</p>
-        <p>At first level, you can choose to use Intelligence instead of Charisma as your spellcasting ability for your warlock spells</p>
+
+        <h3>Spellcasting Ability</h3>
+        <p>At first level, you can choose to use Intelligence instead of Charisma as your spellcasting ability for your warlock spells.</p>
 
         <h2 class="title">Wizard</h2>
 
