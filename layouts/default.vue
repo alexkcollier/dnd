@@ -1,6 +1,6 @@
 <template>
   <div class="columns page-container">
-    <Navigation/>
+    <Navigation class="nav"/>
     <div class="content content-wrapper">
       <nuxt/>
     </div>
@@ -8,6 +8,25 @@
 </template>
 
 <style lang="scss" scoped>
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  min-height: 100vh;
+  width: 25%;
+  background-color: rgb(61, 79, 93);
+  text-align: right;
+  padding: 2rem;
+  @media screen and (max-width: 768px) {
+    justify-content: center!important;
+    position: relative;
+    min-height: 30vh;
+    text-align: center;
+    width: 100%;
+  }
+}
+
 .page-container {
   margin: 0 0 0 0!important;
 }
