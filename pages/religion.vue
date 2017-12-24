@@ -168,14 +168,14 @@
 
             <tr>
               <td>Torog, god of the Underdark</td>
-              <td>NE</td>
+              <td class="has-text-centered">NE</td>
               <td>Death</td>
               <td><i>T</i> attached to a circular shackle</td>
             </tr>
 
             <tr>
               <td>Vecna, god of evil secrets</td>
-              <td>NE</td>
+              <td class="has-text-centered">NE</td>
               <td>Death, Knowledge</td>
               <td>Partially shattered one-eyed skull</td>
             </tr>
