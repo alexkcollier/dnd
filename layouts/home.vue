@@ -1,12 +1,12 @@
 <template>
-  <div class="hero is-primary is-bold is-fullheight">
+  <section class="hero is-primary is-bold is-fullheight">
     <div class="hero-body">
       <div class="container has-text-centered">
         <Navigation/>
         <nuxt/>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
