@@ -6,33 +6,29 @@
 
     <div class="navigation-links">
       <nuxt-link 
-        v-for="{name, path} in links" 
-        :to="path" 
-        :key="name" 
-        class="button is-navbtn is-size-5 has-text-capitalized">
-        {{ name | formatLink }}
+        v-for="link in links" 
+        :to="`/${link}`" 
+        :key="link" 
+        class="button is-navbtn is-size-5 is-capitalized">
+        {{ link | splitDash }}
       </nuxt-link>
     </div>
   </nav>
 </template>
 
 <script>
-const capitalize = word => word[0].toUpperCase() + word.slice(1)
-
 export default {
   filters: {
-    // eslint-disable-next-line
-    formatLink: str => str.split('-').map(capitalize).join(' ')
+    splitDash: str => str.replace('-', ' ')
   },
 
-  computed: {
-    links() {
-      return this.$router.options.routes.filter(r => r.path !== '/')
+  data() {
+    return {
+      links: ['races', 'classes', 'religion', 'time', 'additional-rules']
     }
   }
 }
 </script>
-
 
 <style lang="scss" scoped>
 .title {
