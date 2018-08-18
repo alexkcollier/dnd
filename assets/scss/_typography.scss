@@ -1,5 +1,6 @@
 $body-size: 18px;
 $content-heading-color: $red;
+$content-heading-weight: $weight-normal;
 
 // Headings
 h1,
@@ -11,7 +12,6 @@ h6,
 .title,
 .button {
   font-family: 'mrs-eaves-roman-small-caps', $family-primary;
-  font-weight: normal;
   font-variant: small-caps;
 }
 
