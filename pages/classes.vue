@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <top-button/>
-    <div class="columns" id="Classes">
+    <div id="Classes" class="columns">
       <div class="column">
 
         <h1 class="title">Classes</h1>
@@ -11,11 +11,11 @@
         <h3>Path of the Berserker</h3>
 
         <p><b><i>Frenzy.</i></b> Instead of immediately suffering one level of exhaustion when your rage ends, you can make a
-          DC 10 Constitution saving throw. On a failure, you suffer one level of exhaustion. Each time you use this feature
-          after the first, the DC increases by 5. When you finish a long rest, the DC resets to 10.</p>
+        DC 10 Constitution saving throw. On a failure, you suffer one level of exhaustion. Each time you use this feature
+        after the first, the DC increases by 5. When you finish a long rest, the DC resets to 10.</p>
 
         <p><b><i>Intimidating Presence.</i></b> You can use your Strength modifier instead of your Charisma modifier to calculate
-          the DC.</p>
+        the DC.</p>
 
         <h2 class="title">Bard</h2>
 
@@ -82,7 +82,8 @@ export default {
 table {
   width: auto;
   margin: auto;
-  th, td {
+  th,
+  td {
     vertical-align: middle;
   }
 }

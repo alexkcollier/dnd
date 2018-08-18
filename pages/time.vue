@@ -1,11 +1,11 @@
 <template>
   <section class="section">
     <top-button/>
-    <div class="columns" id="Time">
+    <div id="Time" class="columns">
       <div class="column">
         <h1 class="title">Time</h1>
         <p>A year consists of 364 days divided into 12 months of 28 days and 4 festivals of 7 days. There are 7 days in a week
-          named Starday, Sunday, Moonday, Godsday, Waterday, Earthday, and Freeday.</p>
+        named Starday, Sunday, Moonday, Godsday, Waterday, Earthday, and Freeday.</p>
 
         <h2 class="title">The Calendar</h2>
         <table class="table is-striped">
@@ -17,7 +17,7 @@
           </thead>
           <tbody>
             <tr>
-              <td  class="is-italic has-text-centered" colspan="2">Needfest</td>
+              <td class="is-italic has-text-centered" colspan="2">Needfest</td>
             </tr>
             <tr>
               <td class="has-text-centered">1</td>
@@ -32,7 +32,7 @@
               <td>Coldeven</td>
             </tr>
             <tr>
-              <td  class="is-italic has-text-centered" colspan="2">Growfest</td>
+              <td class="is-italic has-text-centered" colspan="2">Growfest</td>
             </tr>
             <tr>
               <td class="has-text-centered">4</td>
@@ -47,7 +47,7 @@
               <td>Wealsun</td>
             </tr>
             <tr>
-              <td  class="is-italic has-text-centered" colspan="2">Richfest</td>
+              <td class="is-italic has-text-centered" colspan="2">Richfest</td>
             </tr>
             <tr>
               <td class="has-text-centered">7</td>
@@ -62,7 +62,7 @@
               <td>Harvester</td>
             </tr>
             <tr>
-              <td  class="is-italic has-text-centered" colspan="2">Brewfest</td>
+              <td class="is-italic has-text-centered" colspan="2">Brewfest</td>
             </tr>
             <tr>
               <td class="has-text-centered">10</td>
@@ -97,7 +97,8 @@ export default {
 table {
   width: auto;
   margin: auto;
-  th, td {
+  th,
+  td {
     vertical-align: middle;
   }
 }

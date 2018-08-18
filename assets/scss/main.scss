@@ -1,27 +1,24 @@
 // Import typekit
-@import url("https://use.typekit.net/fnw1iwa.css");
+@import url('https://use.typekit.net/fnw1iwa.css');
 
 // Import variables and functions
-@import "~bulma/sass/utilities/initial-variables";
-@import "~bulma/sass/utilities/functions";
+@import '~bulma/sass/utilities/initial-variables';
+@import '~bulma/sass/utilities/functions';
 
 // Import custom
-@import "variables";
-@import "typography";
+@import '_variables';
+@import '_typography';
 
 .page {
-  &-enter-active, &-leave-active {
+  &-enter-active,
+  &-leave-active {
     transition: 500ms ease-in-out;
   }
+
   &-enter, &-leave-to /* &-leave-active below version 2.1.8 */ {
     opacity: 0;
   }
 }
 
-// Button fix for minified html
-.button {
-  margin: 0.3em;
-}
-
 // Import the rest of bulma
-@import "~bulma/bulma";
+@import '~bulma/bulma';

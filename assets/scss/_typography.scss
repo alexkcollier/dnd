@@ -1,13 +1,20 @@
 $body-size: 18px;
+$content-heading-color: $red;
 
 // Headings
-h1, h2, h3, h4, h5, h6, .title, .button {
-  font-family: "mrs-eaves-roman-small-caps", $family-primary;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title,
+.button {
+  font-family: 'mrs-eaves-roman-small-caps', $family-primary;
   font-weight: normal;
   font-variant: small-caps;
 }
 
-$content-heading-color: $red;
 
 .content {
   h2 {
@@ -18,7 +25,7 @@ $content-heading-color: $red;
 // Tables
 table {
   font-family: $family-sans-serif;
-  font-feature-settings: "lnum";
+  font-feature-settings: 'lnum';
 }
 
 // Add is-italic
