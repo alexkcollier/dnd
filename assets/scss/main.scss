@@ -22,3 +22,25 @@
 
 // Import the rest of bulma
 @import '~bulma/bulma';
+
+// Manual table settings - markdown-it-attrs doesn't handle tables
+.content {
+  table {
+    width: auto;
+    margin: auto;
+    
+    th,
+    td {
+      vertical-align: middle;
+    }
+
+    // Dangerous extend
+    @extend .table;
+    @extend .is-striped;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      overflow-x: auto;
+    }
+  }
+}

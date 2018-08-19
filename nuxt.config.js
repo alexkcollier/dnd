@@ -26,7 +26,8 @@ module.exports = {
   modules: ['@nuxtjs/markdownit'],
 
   markdownit: {
-    injected: true
+    injected: true,
+    use: ['markdown-it-attrs', 'markdown-it-sup']
   },
 
   plugins: ['~/plugins/contentful'],
