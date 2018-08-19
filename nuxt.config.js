@@ -46,6 +46,9 @@ module.exports = {
     },
 
     generate: {
+      // fallback for netlify
+      fallback: true,
+
       routes() {
         return cdaClient
           .getEntries({
@@ -53,7 +56,7 @@ module.exports = {
           })
           .then(([entries, postType]) => {
             return [
-              ...entries.items.map(entry => `/blog/${entry.fields.slug}`),
+              ...entries.items.map(entry => `/${entry.fields.slug}`),
               ...postType.fields
                 .find(field => field.id === 'tags')
                 .items.validations[0].in.map(tag => `/tags/${tag}`)
