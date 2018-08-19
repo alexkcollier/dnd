@@ -32,7 +32,7 @@ export default {
     }
   },
 
-  async asyncData({ app, params }) {
+  async asyncData({ app, error, params }) {
     const entryConfig = {
       content_type: 'post',
       'fields.slug': params.slug
@@ -40,6 +40,10 @@ export default {
 
     // Use default client
     const entries = await app.$contentful.getEntries(entryConfig)
+
+    if (await !entries.items.length) {
+      return error({ statusCode: 404, message: 'This page could not be found' })
+    }
 
     return { post: entries.items[0] }
   }
