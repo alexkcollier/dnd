@@ -45,26 +45,22 @@ module.exports = {
       }
     },
 
-    generate: {
-      // fallback for netlify
-      // fallback: true,
-      routes: ['/races']
-      // routes() {
-      //   return cdaClient
-      //     .getEntries({ content_type: 'post' })
-      //     .then(entries =>
-      //       entries.items.map(entry => ({ route: `/${entry.fields.slug}` }))
-      //     )
-      //     .catch(console.error)
-      // }
-    },
-
     postcss: {
       plugins: {
         'postcss-custom-properties': {
           warnings: false
         }
       }
+    }
+  },
+
+  generate: {
+    routes() {
+      return cdaClient.getEntries({ content_type: 'post' }).then(entries => {
+        return entries.items.map(entry => {
+          return { route: `/${entry.fields.slug}` }
+        })
+      })
     }
   }
 }
