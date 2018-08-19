@@ -51,17 +51,8 @@ module.exports = {
 
       routes() {
         return cdaClient
-          .getEntries({
-            content_type: ctfConfig.CTF_BLOG_POST_TYPE_ID
-          })
-          .then(([entries, postType]) => {
-            return [
-              ...entries.items.map(entry => `/${entry.fields.slug}`),
-              ...postType.fields
-                .find(field => field.id === 'tags')
-                .items.validations[0].in.map(tag => `/tags/${tag}`)
-            ]
-          })
+          .getEntries({ content_type: 'post' })
+          .then(entries => entries.items.map(entry => `/${entry.fields.slug}`))
       }
     },
 
