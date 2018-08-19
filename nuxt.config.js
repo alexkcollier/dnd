@@ -21,7 +21,7 @@ module.exports = {
 
   loading: { color: '#3B8070' },
 
-  css: ['@assets/scss/main.scss'],
+  css: [{ src: '@assets/scss/main.scss', lang: 'scss' }],
 
   modules: ['@nuxtjs/markdownit'],
 
@@ -47,13 +47,16 @@ module.exports = {
 
     generate: {
       // fallback for netlify
-      fallback: true,
-
-      routes() {
-        return cdaClient
-          .getEntries({ content_type: 'post' })
-          .then(entries => entries.items.map(entry => `/${entry.fields.slug}`))
-      }
+      // fallback: true,
+      routes: ['/races']
+      // routes() {
+      //   return cdaClient
+      //     .getEntries({ content_type: 'post' })
+      //     .then(entries =>
+      //       entries.items.map(entry => ({ route: `/${entry.fields.slug}` }))
+      //     )
+      //     .catch(console.error)
+      // }
     },
 
     postcss: {
