@@ -1,8 +1,8 @@
 <template>
   <div class="columns page-container">
     
-    <Navigation/>
-
+    <Navigation :is-fullwidth="$route.path === '/'"/>
+    
     <div class="content content-wrapper">
       <nuxt/>
     </div>
