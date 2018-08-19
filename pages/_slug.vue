@@ -1,6 +1,5 @@
 <template>
   <section class="section">
-    <top-button/>
     <div class="columns">
       <div class="column">
         <h1>{{ post.fields.title }}</h1>

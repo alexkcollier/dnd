@@ -1,8 +1,11 @@
 <template>
   <transition name="fade">
-    <div v-show="scrolled">
-      <div id="topBtn" class="button top-button" @click="topFunction">Top</div>
-    </div>
+    <button
+      v-show="scrolled"
+      class="button top-button"
+      @click="scrollToTop">
+      Top
+    </button>
   </transition>
 </template>
 
@@ -13,53 +16,58 @@ export default {
       scrolled: false
     }
   },
-  beforeMount() {
-    window.addEventListener('scroll', this.handleScroll)
+
+  mounted() {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', this.handleScroll)
+    }
+
+    this.handleScroll()
   },
+
   destroyed() {
-    window.removeEventListener('scroll', this.handleScroll)
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('scroll', this.handleScroll)
+    }
   },
+
   methods: {
     handleScroll() {
       this.scrolled = window.scrollY > 0
     },
-    topFunction() {
-      document.body.scrollTop = 0 // Chrome, Safari, Opera
-      document.documentElement.scrollTop = 0 // IE, Firefox
+
+    scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   }
 }
 </script>
 
-
-<style lang='scss' scoped>
-.fade {
-  &-enter-active,
-  &-leave-active {
-    transition: 250ms ease-in-out;
-  }
-  &-enter, &-leave-to /* &-leave-active below version 2.1.8 */ {
-    opacity: 0;
-  }
-}
+<style lang="scss" scoped>
+$fade-time: 250ms;
 
 .top-button {
-  display: block;
-  position: fixed;
-  bottom: 2%;
-  right: 2%;
-  z-index: 1000;
-  opacity: 0.6;
-  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
+  $distance: 5%;
+  bottom: $distance;
+  box-shadow: 0px 5px 20px rgba($color: #000000, $alpha: 0.2);
   font-family: 'freight-sans-pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', Arial,
     sans-serif;
-  text-transform: uppercase;
-  &:hover,
-  &:active {
+  opacity: 0.6;
+  position: fixed;
+  right: $distance;
+  transition: all $fade-time;
+  z-index: 10;
+
+  &:hover {
     opacity: 1;
-    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.3);
-    transition: 100ms ease-in-out;
+  }
+}
+
+.fade {
+  &-enter,
+  &-leave-to {
+    opacity: 0;
   }
 }
 </style>
