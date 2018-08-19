@@ -9,7 +9,7 @@ const cdaClient = contentful.createClient({
 
 module.exports = {
   head: {
-    titleTemplate: '%s | Olarann',
+    titleTemplate: chunk => (chunk ? `${chunk} | D&D` : 'D&D'),
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -19,7 +19,7 @@ module.exports = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
-  loading: { color: '#3B8070' },
+  loading: { color: 'rgb(194, 174, 109)', height: '0.25em' },
 
   css: [{ src: '@assets/scss/main.scss', lang: 'scss' }],
 
