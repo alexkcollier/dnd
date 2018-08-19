@@ -2,8 +2,10 @@
   <section class="section">
     <top-button/>
     <div class="columns">
-      <div class="column" v-html="$prismic.asHtml(data.content)"/>
-      <!-- <div class="column" v-html="$prismic.asHtml(data.table)"/> -->
+      <div class="column">
+        <h1>{{ post.fields.title }}</h1>
+        <div v-html="$md.render(post.fields.body)"/>
+      </div>
     </div>
   </section>
 </template>
@@ -30,11 +32,16 @@ export default {
     }
   },
 
-  async asyncData({ app, params, route }) {
-    const api = await app.$prismic.initApi()
-    const { data } = await api.getByUID('post', params.slug)
+  async asyncData({ app, params }) {
+    const entryConfig = {
+      content_type: 'post',
+      'fields.slug': params.slug
+    }
 
-    return { data }
+    // Use default client
+    const entries = await app.$contentful.getEntries(entryConfig)
+
+    return { post: entries.items[0] }
   }
 }
 </script>

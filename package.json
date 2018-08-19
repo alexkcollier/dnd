@@ -14,10 +14,11 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/markdownit": "^1.2.1",
     "bulma": "^0.7.1",
-    "nuxt": "^1.4.2",
-    "prismic-dom": "^2.1.0",
-    "prismic-javascript": "^1.5.0"
+    "contentful": "^7.0.0",
+    "dotenv": "^6.0.0",
+    "nuxt": "^1.4.2"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",

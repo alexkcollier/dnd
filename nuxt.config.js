@@ -1,3 +1,12 @@
+require('dotenv').config()
+const ctfConfig = require('./contentful.config')
+const contentful = require('contentful')
+
+const cdaClient = contentful.createClient({
+  space: ctfConfig.CTF_SPACE_ID,
+  accessToken: ctfConfig.CTF_CDA_KEY
+})
+
 module.exports = {
   head: {
     titleTemplate: '%s | Olarann',
@@ -14,7 +23,15 @@ module.exports = {
 
   css: ['@assets/scss/main.scss'],
 
-  plugins: ['~/plugins/prismic'],
+  modules: ['@nuxtjs/markdownit'],
+
+  markdownit: {
+    injected: true
+  },
+
+  plugins: ['~/plugins/contentful'],
+
+  env: { ...ctfConfig },
 
   build: {
     extend(config, ctx) {
@@ -25,6 +42,23 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+      }
+    },
+
+    generate: {
+      routes() {
+        return cdaClient
+          .getEntries({
+            content_type: ctfConfig.CTF_BLOG_POST_TYPE_ID
+          })
+          .then(([entries, postType]) => {
+            return [
+              ...entries.items.map(entry => `/blog/${entry.fields.slug}`),
+              ...postType.fields
+                .find(field => field.id === 'tags')
+                .items.validations[0].in.map(tag => `/tags/${tag}`)
+            ]
+          })
       }
     },
 
