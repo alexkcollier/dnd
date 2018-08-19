@@ -1,12 +1,12 @@
 <template>
   <div class="columns page-container">
     <Navigation :is-fullwidth="$route.path === '/'"/>
+    <TopButton/>
 
     <div class="content content-wrapper">
       <nuxt/>
     </div>
 
-    <TopButton/>
   </div>
 </template>
 

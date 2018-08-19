@@ -28,8 +28,7 @@
   table {
     width: auto;
     margin: auto;
-    max-width: min-content;
-    
+
     th,
     td {
       vertical-align: middle;
@@ -41,6 +40,7 @@
 
     @media screen and (max-width: 768px) {
       display: block;
+      max-width: min-content;
       overflow-x: auto;
     }
   }
