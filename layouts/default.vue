@@ -1,10 +1,10 @@
 <template>
   <div class="columns page-container">
-    <Navigation :is-fullwidth="$route.path === '/'"/>
-    <TopButton/>
+    <Navigation :is-fullwidth="$route.path === '/'" />
+    <TopButton />
 
     <div class="content content-wrapper">
-      <nuxt/>
+      <nuxt />
     </div>
 
   </div>

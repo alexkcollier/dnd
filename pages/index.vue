@@ -1,7 +1,7 @@
 <script>
+// render empty page
 export default {
-  render(createElement, context) {
-    return context
-  }
+  functional: true,
+  render: (h, context) => context
 }
 </script>

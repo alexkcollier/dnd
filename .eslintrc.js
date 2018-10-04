@@ -34,6 +34,7 @@ module.exports = {
           allowFirstLine: false
         }
       }
-    ]
+    ],
+    'vue/html-closing-bracket-newline': 'off'
   }
 }

@@ -7,8 +7,8 @@
     <div class="navigation-links">
       <nuxt-link 
         v-for="link in links" 
-        :to="`/${link}`" 
-        :key="link"
+        :key="link" 
+        :to="`/${link}`"
         class="button is-navbtn is-capitalized">
         {{ link | splitDash }}
       </nuxt-link>

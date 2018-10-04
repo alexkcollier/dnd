@@ -3,21 +3,16 @@
     <div class="columns">
       <div class="column">
         <h1>{{ post.fields.title }}</h1>
-        <div v-html="$md.render(post.fields.body)"/>
+        <!-- eslint-disable-next-line vue/no-v-html -->
+        <div v-html="$md.render(post.fields.body)" />
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import TopButton from '~/components/TopButton.vue'
-
 export default {
   name: 'SlugPage',
-
-  components: {
-    TopButton
-  },
 
   head() {
     return {

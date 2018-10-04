@@ -1,6 +1,6 @@
 {
   "name": "dnd",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Nuxt.js project",
   "author": "",
   "private": true,
@@ -14,28 +14,28 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@nuxtjs/markdownit": "^1.2.1",
+    "@nuxtjs/markdownit": "^1.2.2",
     "bulma": "^0.7.1",
-    "contentful": "^7.0.0",
+    "contentful": "^7.0.4",
     "dotenv": "^6.0.0",
-    "markdown-it-attrs": "^2.3.1",
+    "markdown-it-attrs": "^2.3.2",
     "markdown-it-sup": "^1.0.0",
-    "nuxt": "^1.4.2"
+    "nuxt": "^2.1.0"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.6",
-    "eslint": "^5.4.0",
-    "eslint-config-prettier": "^3.0.1",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-loader": "^2.1.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.6.1",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-loader": "^2.1.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-prettier": "^2.6.2",
-    "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0",
-    "eslint-plugin-vue": "^4.7.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.0.0-beta.3",
     "node-sass": "^4.9.3",
-    "prettier": "^1.14.2",
+    "prettier": "^1.14.3",
     "sass-loader": "^7.1.0"
   }
 }

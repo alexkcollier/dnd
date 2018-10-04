@@ -1,13 +1,12 @@
-require('dotenv').config()
-const ctfConfig = require('./contentful.config')
-const contentful = require('contentful')
+import * as contentful from 'contentful'
+import { ctfConfig } from './contentful.config.js'
 
 const cdaClient = contentful.createClient({
   space: ctfConfig.CTF_SPACE_ID,
-  accessToken: ctfConfig.CTF_CDA_KEY
+  accessToken: ctfConfig.CTF_PERSONAL_ACCESS_TOKEN
 })
 
-module.exports = {
+export default {
   head: {
     titleTemplate: chunk => (chunk ? `${chunk} | D&D` : 'D&D'),
     meta: [
@@ -56,12 +55,9 @@ module.exports = {
   },
 
   generate: {
-    routes() {
-      return cdaClient.getEntries({ content_type: 'post' }).then(entries => {
-        return entries.items.map(entry => {
-          return { route: `/${entry.fields.slug}` }
-        })
+    routes: () =>
+      cdaClient.getEntries({ content_type: 'post' }).then(({ items }) => {
+        return items.map(entry => ({ route: `/${entry.fields.slug}` }))
       })
-    }
   }
 }
