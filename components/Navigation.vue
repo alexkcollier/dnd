@@ -31,7 +31,7 @@ export default {
 
   data() {
     return {
-      links: ['races', 'classes', 'religion', 'time', 'additional-rules']
+      links: ['races', 'classes', 'religion', 'time', 'moon-phases', 'additional-rules']
     }
   }
 }
