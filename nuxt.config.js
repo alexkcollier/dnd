@@ -1,9 +1,9 @@
-import * as contentful from 'contentful'
-import { ctfConfig } from './contentful.config.js'
+import contentful from 'contentful'
+import { ctfConfig } from './contentful.config'
 
 const cdaClient = contentful.createClient({
   space: ctfConfig.CTF_SPACE_ID,
-  accessToken: ctfConfig.CTF_PERSONAL_ACCESS_TOKEN
+  accessToken: ctfConfig.CTF_CDA_KEY
 })
 
 export default {
