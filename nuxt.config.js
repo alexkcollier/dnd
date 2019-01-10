@@ -25,7 +25,15 @@ export default {
       { hid: 'description', name: 'description', content: 'D&D custom rules' },
       { name: 'theme-color', content: '#3d4f5d' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'preload',
+        as: 'style',
+        crossorigin: 'anonymous',
+        href: 'https://use.typekit.net/fnw1iwa.css'
+      }
+    ]
   },
 
   loading: { color: 'rgb(194, 174, 109)', height: '0.25em' },
