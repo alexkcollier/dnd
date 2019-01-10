@@ -34,7 +34,7 @@ export default {
     use: ['markdown-it-attrs', 'markdown-it-sup']
   },
 
-  plugins: ['~/plugins/contentful'],
+  plugins: ['~/plugins/contentful', { src: '~/plugins/vuex-persist.js', ssr: false }],
 
   env: { ...ctfConfig },
 
@@ -60,9 +60,12 @@ export default {
   },
 
   generate: {
-    routes: () =>
-      cdaClient.getEntries({ content_type: 'post' }).then(({ items }) => {
-        return items.map(entry => ({ route: `/${entry.fields.slug}` }))
-      })
+    interval: 100,
+
+    routes: () => {
+      return cdaClient
+        .getEntries({ content_type: 'post' })
+        .then(res => res.items.map(entry => ({ route: `/${entry.fields.slug}`, payload: res })))
+    }
   }
 }

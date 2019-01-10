@@ -19,25 +19,27 @@ export default {
     }
   },
 
-  methods: {
-    prettyTitle(str) {
-      return str
-        .split('-')
-        .map(word => word[0].toUpperCase() + word.slice(1))
-        .join(' ')
+  computed: {
+    post() {
+      return this.$store.state.contentful.content[this.$route.params.slug]
     }
   },
 
-  async asyncData({ app, error, params }) {
+  methods: {
+    prettyTitle(str) {
+      const parts = str.split('-').map(word => word[0].toUpperCase() + word.slice(1))
+      return parts.join(' ')
+    }
+  },
+
+  async fetch({ app, error, params, payload, store }) {
     try {
-      const entries = await app.$contentful.getEntries({
-        content_type: 'post',
-        'fields.slug': params.slug
-      })
+      if (store.getters['contentful/shouldFetch']) {
+        const entries = payload || (await app.$contentful.getEntries({ content_type: 'post' }))
+        store.commit('contentful/SET_CONTENT', { entries })
+      }
 
-      if (!entries.total) throw new Error('This page could not be found')
-
-      return { post: entries.items[0] }
+      if (!store.getters['contentful/contentExists'](params.slug)) throw new Error()
     } catch ({ message, statusCode }) {
       return error({
         statusCode: statusCode || 404,
