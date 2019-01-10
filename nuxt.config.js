@@ -16,6 +16,9 @@ export default {
     titleTemplate: chunk => {
       return chunk ? `${chunk} | D&D` : 'D&D'
     },
+    htmlAttrs: {
+      lang: 'en-CA'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
