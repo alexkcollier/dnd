@@ -11,12 +11,12 @@
         <h2>Moon Phase Calendar for {{ calendar.year }}</h2>
 
         <template v-for="(month, monthIndex) in calendar.months">
-          <h3 :key="month">
+          <h3 :key="'heading' + month">
             {{ month }}
           </h3>
 
           <table
-            :key="month"
+            :key="'table' + month"
             class="moon-phase-table table is-bordered"
           >
             <thead>
