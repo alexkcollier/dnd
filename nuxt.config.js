@@ -9,6 +9,8 @@ const cdaClient = contentful.createClient({
 export default {
   mode: 'spa',
 
+  modern: 'client',
+
   head: {
     // for whatever reason, it didn't like the implied return in `() => titleExpression`
     titleTemplate: chunk => {
