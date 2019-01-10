@@ -1,7 +1,12 @@
 <template>
-  <nav :class="{'is-fullwidth': isFullwidth }" class="navigation">
+  <nav
+    :class="{'is-fullwidth': isFullwidth }"
+    class="navigation"
+  >
     <nuxt-link to="/">
-      <h1 class="title">D&amp;D</h1>
+      <h1 class="title">
+        D&amp;D
+      </h1>
     </nuxt-link>
 
     <div class="navigation-links">
@@ -9,7 +14,8 @@
         v-for="link in links" 
         :key="link" 
         :to="`/${link}`"
-        class="button is-navbtn is-capitalized">
+        class="button is-navbtn is-capitalized"
+      >
         {{ link | splitDash }}
       </nuxt-link>
     </div>

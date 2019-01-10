@@ -3,7 +3,8 @@
     <button
       v-show="scrolled"
       class="button top-button"
-      @click="scrollToTop">
+      @click="scrollToTop"
+    >
       Top
     </button>
   </transition>

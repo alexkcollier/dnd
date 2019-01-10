@@ -1,4 +1,4 @@
-import contentful from 'contentful'
+import * as contentful from 'contentful'
 import { ctfConfig } from './contentful.config'
 
 const cdaClient = contentful.createClient({
@@ -7,8 +7,13 @@ const cdaClient = contentful.createClient({
 })
 
 export default {
+  mode: 'spa',
+
   head: {
-    titleTemplate: chunk => (chunk ? `${chunk} | D&D` : 'D&D'),
+    // for whatever reason, it didn't like the implied return in `() => titleExpression`
+    titleTemplate: chunk => {
+      return chunk ? `${chunk} | D&D` : 'D&D'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

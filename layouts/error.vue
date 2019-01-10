@@ -2,7 +2,9 @@
   <div class="content content-wrapper">
     <div class="hero is-fullheight">
       <div class="hero-body">
-        <h1 class="title is-size-1">{{ message }}</h1>
+        <h1 class="title is-size-1">
+          {{ message }}
+        </h1>
       </div>
     </div>
   </div>

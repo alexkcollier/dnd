@@ -6,7 +6,6 @@
     <div class="content content-wrapper">
       <nuxt />
     </div>
-
   </div>
 </template>
 
