@@ -3,7 +3,6 @@
     <div class="columns">
       <div class="column">
         <h1>{{ post.fields.title }}</h1>
-        <!-- eslint-disable-next-line vue/no-v-html -->
         <div v-html="$md.render(post.fields.body)" />
       </div>
     </div>
@@ -30,19 +29,21 @@ export default {
   },
 
   async asyncData({ app, error, params }) {
-    const entryConfig = {
-      content_type: 'post',
-      'fields.slug': params.slug
+    try {
+      const entries = await app.$contentful.getEntries({
+        content_type: 'post',
+        'fields.slug': params.slug
+      })
+
+      if (!entries.total) throw new Error('This page could not be found')
+
+      return { post: entries.items[0] }
+    } catch ({ message, statusCode }) {
+      return error({
+        statusCode: statusCode || 404,
+        message: message || 'This page could not be found'
+      })
     }
-
-    // Use default client
-    const entries = await app.$contentful.getEntries(entryConfig)
-
-    if (await !entries.items.length) {
-      return error({ statusCode: 404, message: 'This page could not be found' })
-    }
-
-    return { post: entries.items[0] }
   }
 }
 </script>
