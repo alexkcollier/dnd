@@ -3,7 +3,6 @@
     <div class="columns">
       <div class="column">
         <h1>{{ post.fields.title }}</h1>
-        <!-- eslint-disable-next-line vue/no-v-html -->
         <div v-html="$md.render(post.fields.body)" />
       </div>
     </div>
@@ -20,28 +19,32 @@ export default {
     }
   },
 
-  async asyncData({ app, error, params }) {
-    const entryConfig = {
-      content_type: 'post',
-      'fields.slug': params.slug
+  computed: {
+    post() {
+      return this.$store.state.contentful.content[this.$route.params.slug]
     }
-
-    // Use default client
-    const entries = await app.$contentful.getEntries(entryConfig)
-
-    if (await !entries.items.length) {
-      return error({ statusCode: 404, message: 'This page could not be found' })
-    }
-
-    return { post: entries.items[0] }
   },
 
   methods: {
     prettyTitle(str) {
-      return str
-        .split('-')
-        .map(word => word[0].toUpperCase() + word.slice(1))
-        .join(' ')
+      const parts = str.split('-').map(word => word[0].toUpperCase() + word.slice(1))
+      return parts.join(' ')
+    }
+  },
+
+  async fetch({ app, error, params, payload, store }) {
+    try {
+      if (store.getters['contentful/shouldFetch']) {
+        const entries = payload || (await app.$contentful.getEntries({ content_type: 'post' }))
+        store.commit('contentful/SET_CONTENT', { entries })
+      }
+
+      if (!store.getters['contentful/contentExists'](params.slug)) throw new Error()
+    } catch ({ message, statusCode }) {
+      return error({
+        statusCode: statusCode || 404,
+        message: message || 'This page could not be found'
+      })
     }
   }
 }

@@ -11,28 +11,39 @@
         <h2>Moon Phase Calendar for {{ calendar.year }}</h2>
 
         <template v-for="(month, monthIndex) in calendar.months">
-          <h3 :key="month">
+          <h3 :key="'heading' + month">
             {{ month }}
           </h3>
 
-          <table :key="month" class="moon-phase-table table is-bordered">
+          <table
+            :key="'table' + month"
+            class="moon-phase-table table is-bordered"
+          >
             <thead>
-              <th v-for="day in calendar.weekdays" :key="day">
+              <th
+                v-for="day in calendar.weekdays"
+                :key="day"
+              >
                 {{ day }}
               </th>
             </thead>
 
             <tbody>
-              <tr v-for="weekNumber in getWeeks(month)" :key="weekNumber">
+              <tr
+                v-for="weekNumber in getWeeks(month)"
+                :key="weekNumber"
+              >
                 <td
                   v-for="(day, dayIndex) in calendar.weekdays"
                   :key="dayIndex"
-                  class="weekday">
+                  class="weekday"
+                >
                   <div class="moon-container">
                     <div
                       v-for="moon in calendar.moons"
                       :key="moon"
-                      class="moon is-size-7">
+                      class="moon is-size-7"
+                    >
                       {{ moon }}
                       <img
                         class="phase"
@@ -53,7 +64,8 @@
                           moon,
                           monthIndex,
                           dayOfMonth(weekNumber, dayIndex)
-                        )">
+                        )"
+                      >
                     </div>
                   </div>
 

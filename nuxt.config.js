@@ -7,15 +7,33 @@ const cdaClient = contentful.createClient({
 })
 
 export default {
+  mode: 'spa',
+
+  modern: 'client',
+
   head: {
-    titleTemplate: chunk => (chunk ? `${chunk} | D&D` : 'D&D'),
+    // for whatever reason, it didn't like the implied return in `() => titleExpression`
+    titleTemplate: chunk => {
+      return chunk ? `${chunk} | D&D` : 'D&D'
+    },
+    htmlAttrs: {
+      lang: 'en-CA'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'D&D custom rules' },
       { name: 'theme-color', content: '#3d4f5d' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'preload',
+        as: 'style',
+        crossorigin: 'anonymous',
+        href: 'https://use.typekit.net/fnw1iwa.css'
+      }
+    ]
   },
 
   loading: { color: 'rgb(194, 174, 109)', height: '0.25em' },
@@ -29,7 +47,7 @@ export default {
     use: ['markdown-it-attrs', 'markdown-it-sup']
   },
 
-  plugins: ['~/plugins/contentful'],
+  plugins: ['~/plugins/contentful', { src: '~/plugins/vuex-persist.js', ssr: false }],
 
   env: { ...ctfConfig },
 
@@ -55,9 +73,12 @@ export default {
   },
 
   generate: {
-    routes: () =>
-      cdaClient.getEntries({ content_type: 'post' }).then(({ items }) => {
-        return items.map(entry => ({ route: `/${entry.fields.slug}` }))
-      })
+    interval: 100,
+
+    routes: () => {
+      return cdaClient
+        .getEntries({ content_type: 'post' })
+        .then(res => res.items.map(entry => ({ route: `/${entry.fields.slug}`, payload: res })))
+    }
   }
 }

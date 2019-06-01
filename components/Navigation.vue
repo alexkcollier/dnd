@@ -1,5 +1,8 @@
 <template>
-  <nav :class="{'is-fullwidth': isFullwidth }" class="navigation">
+  <nav
+    :class="{'is-fullwidth': isFullwidth }"
+    class="navigation"
+  >
     <nuxt-link to="/">
       <h1 class="title">
         D&amp;D
