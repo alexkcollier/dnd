@@ -1,4 +1,4 @@
-import contentful from 'contentful'
+import * as contentful from 'contentful'
 import { ctfConfig } from './contentful.config'
 
 const cdaClient = contentful.createClient({

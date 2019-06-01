@@ -16,7 +16,6 @@
           </h3>
 
           <table :key="month" class="moon-phase-table table is-bordered">
-
             <thead>
               <th v-for="day in calendar.weekdays" :key="day">
                 {{ day }}
@@ -29,7 +28,6 @@
                   v-for="(day, dayIndex) in calendar.weekdays"
                   :key="dayIndex"
                   class="weekday">
-
                   <div class="moon-container">
                     <div
                       v-for="moon in calendar.moons"
@@ -55,16 +53,14 @@
                           moon,
                           monthIndex,
                           dayOfMonth(weekNumber, dayIndex)
-                      )">
+                        )">
                     </div>
                   </div>
 
                   <div>{{ dayOfMonth(weekNumber, dayIndex) }}</div>
-
                 </td>
               </tr>
             </tbody>
-
           </table>
         </template>
       </div>

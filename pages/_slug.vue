@@ -20,15 +20,6 @@ export default {
     }
   },
 
-  methods: {
-    prettyTitle(str) {
-      return str
-        .split('-')
-        .map(word => word[0].toUpperCase() + word.slice(1))
-        .join(' ')
-    }
-  },
-
   async asyncData({ app, error, params }) {
     const entryConfig = {
       content_type: 'post',
@@ -43,6 +34,15 @@ export default {
     }
 
     return { post: entries.items[0] }
+  },
+
+  methods: {
+    prettyTitle(str) {
+      return str
+        .split('-')
+        .map(word => word[0].toUpperCase() + word.slice(1))
+        .join(' ')
+    }
   }
 }
 </script>
