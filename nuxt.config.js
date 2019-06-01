@@ -69,6 +69,13 @@ export default {
           warnings: false
         }
       }
+    },
+
+    loaders: {
+      scss: {
+        implementation: require('sass'),
+        fiber: require('fibers')
+      }
     }
   },
 
