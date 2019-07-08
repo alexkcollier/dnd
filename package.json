@@ -27,7 +27,7 @@
     "babel-eslint": "^10.0.1",
     "dotenv": "^8.0.0",
     "eslint": "^5.16.0",
-    "eslint-loader": "^2.1.1",
+    "eslint-loader": "^2.2.1",
     "fibers": "^4.0.1",
     "prettier": "1.14.3",
     "sass": "^1.20.3",
