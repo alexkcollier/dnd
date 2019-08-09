@@ -31,6 +31,6 @@
     "fibers": "^4.0.1",
     "prettier": "1.14.3",
     "sass": "^1.22.5",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^7.2.0"
   }
 }
