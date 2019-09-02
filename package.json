@@ -20,7 +20,7 @@
     "markdown-it-attrs": "^2.3.2",
     "markdown-it-sup": "^1.0.0",
     "nuxt": "^2.9.2",
-    "vuex-persist": "^2.0.1"
+    "vuex-persist": "^2.1.0"
   },
   "devDependencies": {
     "@acollier/eslint-config-vue": "^1.3.2",
