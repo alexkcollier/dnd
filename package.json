@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.7",
-    "bulma": "^0.7.2",
+    "bulma": "^0.8.0",
     "contentful": "^7.10.0",
     "markdown-it-attrs": "^2.3.2",
     "markdown-it-sup": "^1.0.0",
