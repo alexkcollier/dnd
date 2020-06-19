@@ -19,7 +19,7 @@
     "contentful": "^7.14.4",
     "markdown-it-attrs": "^2.3.2",
     "markdown-it-sup": "^1.0.0",
-    "nuxt": "^2.12.2",
+    "nuxt": "^2.13.0",
     "vuex-persist": "^2.2.0"
   },
   "devDependencies": {
