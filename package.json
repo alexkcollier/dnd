@@ -16,7 +16,7 @@
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.10",
     "bulma": "^0.9.1",
-    "contentful": "^7.15.1",
+    "contentful": "^8.0.0",
     "markdown-it-attrs": "^2.3.2",
     "markdown-it-sup": "^1.0.0",
     "nuxt": "^2.14.9",
