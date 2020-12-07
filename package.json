@@ -30,7 +30,7 @@
     "eslint-loader": "^3.0.4",
     "fibers": "^5.0.0",
     "prettier": "2.1.2",
-    "sass": "^1.29.0",
+    "sass": "^1.30.0",
     "sass-loader": "^10.1.0"
   }
 }
